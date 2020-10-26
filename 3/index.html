@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gra papier kamień nożyczki</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: roboto, sans-serif;
+      }
+      /* body {
+        min-height: 120vh;
+      } */
+
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      h3 {
+        margin: 30px 0;
+      }
+      img {
+      }
+      img:hover {
+        cursor: pointer;
+      }
+
+      .panel {
+        margin: 10px;
+      }
+
+      .panel-right,
+      .panel-left {
+        display: inline-block;
+        width: 48%;
+        overflow: hidden;
+        margin: 0px auto 0;
+        text-align: center;
+      }
+
+      .panel-left p {
+        font-size: 20px;
+      }
+
+      .panel h3 {
+        text-align: center;
+      }
+
+      h1,
+      h3 {
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      .select {
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+        min-width: 1000px;
+      }
+
+      .select img {
+        width: 200px;
+        margin: 10px;
+        display: inline-block;
+      }
+
+      button {
+        display: block;
+        padding: 5px 20px;
+        border: 2px solid black;
+        text-transform: uppercase;
+        background-color: #fff;
+        font-weight: bold;
+        margin: 0px auto;
+        transition: 0.3s;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(20, 20, 20);
+        color: white;
+      }
+
+      span {
+        font-weight: bold;
+      }
+      .red{
+        color:red;
+      }
+      .yellow{
+        color:rgb(156, 156, 48);
+      }
+      .green{
+        color:green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>GRA "papier kamień nożyczki"</h1>
+    <div class="select">
+      <h3>Proszę, wybierz:</h3>
+
+      <img
+        data-option="papier"
+        class="first"
+        src="papier.png"
+        alt="Papier"
+        title="Papier"
+      />
+
+      <img data-option="kamień" src="kamien.png" alt="Kamień" title="Kamień" />
+
+      <img
+        data-option="nożyczki"
+        src="nozyczki.png"
+        alt="Nożyczki"
+        title="Nożyczki"
+      />
+    </div>
+
+    <button class="start">Let's play!</button>
+
+    <div class="panel-left">
+      <h3>Wynik gry</h3>
+      <p>Twój wybór: <span data-summary="your-choice"></span></p>
+      <p>Wybór komputera: <span data-summary="pc-choice"></span></p>
+      <b><p>Zwycięzca gry: <span data-summary="who-win"></span></p></b>
+    </div>
+    <div class="panel-right">
+      <h3>Aktualne wyniki</h3>
+      <p class="numbers">liczba gier: <span>0</span></p>
+      <p class="wins">wygranych: <span>0</span></p>
+      <p class="losses">przegranych: <span>0</span></p>
+      <p class="draws">remisów: <span>0</span></p>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
