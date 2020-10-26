@@ -1,0 +1,39 @@
+/* .board {
+    background-color: #111;
+} */
+body {
+    font-family: sans-serif;
+}
+
+.board {
+    width: 360px;
+    position: absolute;
+    top: 50vh;
+    right: 50vh;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 3px;
+    display: grid;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.box {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #222;
+
+}
+
+.box:hover {
+    background: #fafafa;
+}
